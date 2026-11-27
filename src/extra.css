@@ -1,0 +1,22 @@
+/* ---- React Bits integration ---- */
+
+/* hero title (SplitText): third word "Summit" keeps the italic accent of the original */
+.hero h1.hero-title{display:block!important}
+.hero h1 .w3{font-style:italic;color:var(--forest)}
+.hero h1 .split-word{padding-bottom:.08em}
+
+/* eyebrow shine keeps the leading rule from .eyebrow::before */
+.eyebrow .shiny-text{letter-spacing:inherit}
+
+/* stats: keep numbers on one line while counting */
+.stat b{white-space:nowrap}
+
+/* countdown band with Threads background */
+.band{position:relative;overflow:hidden;isolation:isolate}
+.band-bg{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.9}
+.band>.wrap{position:relative;z-index:1}
+@media(prefers-reduced-motion:reduce){.band-bg{display:none}}
+
+/* the lightbox owns its open state now */
+#lb:not([open]){display:none}
+.passes .pass{transition:background .35s,color .35s,outline-color .2s}
